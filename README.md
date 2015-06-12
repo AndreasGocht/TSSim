@@ -100,5 +100,7 @@ For help see
 
     ./index_files.py -h 
     
+##Documentation
 
+The documentation could be found in the Wiki.
 
