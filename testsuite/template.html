@@ -1,0 +1,78 @@
+<!--
+ * The MIT License (MIT)
+ * 
+ * Copyright (c) 2015 Digisoft.tv Ltd.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+-->
+<html>
+<head>
+    <title>$title</title>
+    <link rel="stylesheet" type="text/css" href="$pathCSS"></head>
+    <script type="text/javascript">
+        function show(id,self) {
+            if ( self.innerHTML == "show" )
+            {
+                document.getElementById(id).style.display = 'block';
+                self.innerHTML = "hide"
+            } else {
+                document.getElementById(id).style.display = 'none';
+                self.innerHTML = "show"
+            }
+            
+        }
+    </script>
+    
+<body>
+    <div class="model">
+        $model
+    </div>
+    <div class="results">
+        #for $result in $results
+        <div class="result">
+            <div class="head">
+                $result.head
+            </div>
+            <div class="description">
+                $result.description
+            </div>
+                #for $picline in $result.piclines
+                <div class="picline">
+                    <div class = "head"> module name: $picline </div>
+                    #for $pic in $result.piclines[$picline]
+                    <div class="pics"> 
+                        <div class="pic">
+                            <a href="$pic.pic"><img src="$pic.pic"></a>
+                        </div>
+                        <div class="description">
+                            $pic.description
+                        </div>
+                    </div>
+                    #end for
+                </div>
+                #end for
+            <div class="showhide"><div onclick="show('log_$result.id',this)" class= "inner">show</div>&nbsp;Logfile</div>           
+            <div class="log" id = "log_$result.id">
+                $result.log
+            </div>
+        </div>
+        #end for
+    </div>
+</body>
+</html>
