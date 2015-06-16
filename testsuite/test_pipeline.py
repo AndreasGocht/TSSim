@@ -62,7 +62,7 @@ class Test(th.SimulatorBaseTest):
         config["ModelBasic.stc"]["pcrJumpBorder"] = 100000000 # 3.7s 
         config["ModelBasic.stc"]["trace"] = True
         config["ModelBasic.stcOffset"] = {}
-        config["ModelBasic.stcOffset"]["offset"] = 8000000 #1.5s * 90e3Hz
+        config["ModelBasic.stcOffset"]["offset"] = 8000000 #88.8 s * 90e3Hz
         config["ModelBasic.stcOffset"]["trace"] = False 
         config["ModelBasic.videoDecoderBuffer"] = {}
         config["ModelBasic.videoDecoderBuffer"]["trace"] = True

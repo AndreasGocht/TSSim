@@ -128,7 +128,7 @@ $(STREAMS_DIR)/bbb24p_00.ts: $(STREAMS_DIR)/bbb24p_00.zip |$(STREAMS_DIR)
 	touch $@
 	
 $(STREAMS_DIR)/Sintel.2010.1080p.mkv: |$(STREAMS_DIR)
-	wget http://ftp.nluug.nl/pub/graphics/blender/demo/movies/Sintel.2010.1080p.mkv $(STREAMS_DIR)
+	wget http://ftp.nluug.nl/pub/graphics/blender/demo/movies/Sintel.2010.1080p.mkv -P $(STREAMS_DIR)
 	
 $(STREAMS_DIR)/sintel.ts: $(STREAMS_DIR)/Sintel.2010.1080p.mkv |$(STREAMS_DIR)
 	ffmpeg -re -i $(STREAMS_DIR)/Sintel.2010.1080p.mkv -vcodec copy -acodec copy -bsf:v h264_mp4toannexb -f mpegts $@
