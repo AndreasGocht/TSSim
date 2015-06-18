@@ -102,4 +102,4 @@ For help see
     
 ##Documentation
 
-The documentation could be found in the Wiki.
+The documentation could be found in the [Wiki](https://github.com/Digisoft-tv/TSSim/wiki).
