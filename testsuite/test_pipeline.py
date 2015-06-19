@@ -115,14 +115,14 @@ class Test(th.SimulatorBaseTest):
             return "simulation for file " + os.path.basename(simDirs[key]["file"]["stream"])
         
         def description(simDirs,key):
-            return "The File for the Simulatioen is " + \
+            return "The File for the Simulation is " + \
                         simDirs[key]["file"]["stream"] + "<br /> Video pid is: " + \
                         str(simDirs[key]["file"]["videoPid"]) + "<br /> Audio pid is: " + \
                         str(simDirs[key]["file"]["audioPid"]) + "<br /> Pcr pid is: " + \
                         str(simDirs[key]["file"]["pcrPid"]) + "<br /> name of the program: "+ \
                         str(simDirs[key]["file"]["programName"]) + "<br /> width x height " + \
                         str(simDirs[key]["file"]["width"]) + " x " + str(simDirs[key]["file"]["height"]) + "<br /> min audio length: " + \
-                        str(simDirs[key]["file"]["mindPts"]) + "<br /> witch is constant: " + \
+                        str(simDirs[key]["file"]["mindPts"]) + "<br /> which is constant: " + \
                         str(simDirs[key]["file"]["constantdPts"])
                         
         
@@ -205,14 +205,14 @@ class Test(th.SimulatorBaseTest):
             return "simulation for file " + os.path.basename(simDirs[key]["file"]["stream"])
         
         def description(simDirs,key):
-            return "The File for the Simulatioen is " + \
+            return "The File for the Simulation is " + \
                         simDirs[key]["file"]["stream"] + "<br /> Video pid is: " + \
                         str(simDirs[key]["file"]["videoPid"]) + "<br /> Audio pid is: " + \
                         str(simDirs[key]["file"]["audioPid"]) + "<br /> Pcr pid is: " + \
                         str(simDirs[key]["file"]["pcrPid"]) + "<br /> name of the program: "+ \
                         str(simDirs[key]["file"]["programName"]) + "<br /> width x height " + \
                         str(simDirs[key]["file"]["width"]) + " x " + str(simDirs[key]["file"]["height"]) + "<br /> min audio length: " + \
-                        str(simDirs[key]["file"]["mindPts"]) + "<br /> witch is constant: " + \
+                        str(simDirs[key]["file"]["mindPts"]) + "<br /> which is constant: " + \
                         str(simDirs[key]["file"]["constantdPts"])
                         
         

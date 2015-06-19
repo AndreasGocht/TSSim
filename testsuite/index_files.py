@@ -45,7 +45,7 @@ def printHelp():
                 -json look for a dbname.json instead of reindexing the files
                 -save save the db name to <dbname>.json without any indexing
                 
-                WARNING this script don's check if the database exist. If so it will be deleted and overwritten.'''
+                WARNING this script does not check if the database exists. If so it will be deleted and overwritten.'''
     exit()
 
 for arg in sys.argv[1:]:
